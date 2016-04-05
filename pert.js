@@ -1,3 +1,11 @@
+/**
+ *
+ * pert.js
+ * PERT三点見積もり
+ * @author Atsushi Yonenaga <a.yonenaga@gmail.com>
+ */
+
+
 $(document).ready(function() {
 });
 
@@ -9,7 +17,7 @@ $(document).on('change','input', updatePert);
 // TODO: 三角分布モード実装
 
 /**
- * 
+ * 再計算してinputに出力
  */ 
 
 function updatePert() {
@@ -25,7 +33,7 @@ function updatePert() {
 }
 
 /**
- * 
+ * β分布での加重平均を求める
  */
 function calcPert(saihin, hikan, rakkan){
 	var retval = (saihin*4 + hikan + rakkan)/6;
@@ -34,7 +42,7 @@ function calcPert(saihin, hikan, rakkan){
 }
 
 /**
- *
+ * inputを数値として取得する
  */
 function numInput(name) {
 	var val = $('input[name="' + name + '"]').val();

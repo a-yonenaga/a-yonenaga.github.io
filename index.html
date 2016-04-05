@@ -1,23 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		
 		<title>PERT三点見積もり計算機</title>
+
+
 		<script type="text/javascript" src="https://code.jquery.com/jquery-git.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
 	<body>
-		<h1>PERT三点見積もり計算機</h1>
-		<div>
+		<div class="container">
+			<h1>PERT三点見積もり計算機</h1>
 			<form>
-				最頻値<input type="number" name="saihin" min="0" step="0.1"><br>
-				悲観値<input type="number" name="hikan"  min="0" step="0.1"><br>
-				楽観値<input type="number" name="rakkan"  min="0" step="0.1"><br>
+				<label for="saihin">最頻値</label>
+				<div class="form-group">
+					<input type="number" class="form-control" name="saihin" id="saihin" min="0" step="1"><br>
+				</div>
+
+				<label for="hikan">悲観値</label>
+				<div class="form-group">
+					<input type="number" class="form-control" name="hikan"  min="0" step="1"><br>
+				</div>
+
+				<label for="rakkan">楽観値</label>
+				<div class="form-group">
+					<input type="number" class="form-control" name="rakkan"  min="0" step="1"><br>
+				</div>
 				<!--
 				モード<select>
 					<option>加重分布</option>
 					<option>三角分布</option>
 				</select><br>
 				-->
-				期待値<input type="number" id="estimated" readonly><br>
-				<input type="button" value="計算">
+				<label for="estimated">期待値</label>
+				<div class="form-group">
+					<input type="number" class="form-control" id="estimated" readonly><br>
+				</div>
+
+				<div class="form-group">
+					<input type="button" class="form-control" value="計算">
+				</div>
 			
 			</form>
 		</div>
