@@ -1,6 +1,26 @@
 <html>
-	<head></head>
+	<head>
+		<title>PERT三点見積もり計算機</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-git.min.js"></script>
+	</head>
 	<body>
-		<h1>Hello, World!</h1>
+		<h1>PERT三点見積もり計算機</h1>
+		<div>
+			<form>
+				最頻値<input type="number" name="saihin" min="0" step="0.1"><br>
+				悲観値<input type="number" name="hikan"  min="0" step="0.1"><br>
+				楽観値<input type="number" name="rakkan"  min="0" step="0.1"><br>
+				<!--
+				モード<select>
+					<option>加重分布</option>
+					<option>三角分布</option>
+				</select><br>
+				-->
+				期待値<input type="number" id="estimated" readonly><br>
+				<input type="button" value="計算">
+			
+			</form>
+		</div>
 	</body>
+	<script type="text/javascript" src="./pert.js"></script>
 </html>
