@@ -15,37 +15,53 @@
 		<div class="container">
 			<h1>PERT三点見積もり計算機</h1>
 			<form>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<label for="saihin">最頻値</label>
 				<div class="form-group">
 					<input type="number" class="form-control" name="saihin" id="saihin" min="0" step="1"><br>
 				</div>
+                            </div>
 
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<label for="hikan">悲観値</label>
 				<div class="form-group">
 					<input type="number" class="form-control" name="hikan"  min="0" step="1"><br>
 				</div>
+                            </div>
 
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<label for="rakkan">楽観値</label>
 				<div class="form-group">
 					<input type="number" class="form-control" name="rakkan"  min="0" step="1"><br>
 				</div>
-				<!--
-				モード<select>
-					<option>加重分布</option>
-					<option>三角分布</option>
-				</select><br>
-				-->
+                            </div>
+                            <!--
+                            モード<select>
+                                    <option>加重分布</option>
+                                    <option>三角分布</option>
+                            </select><br>
+                            -->
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 				<label for="estimated">期待値</label>
 				<div class="form-group">
 					<input type="number" class="form-control" id="estimated" readonly><br>
 				</div>
+                            </div>
+                            
+                            <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
 
-				<div class="form-group">
-					<input type="button" class="form-control" value="計算">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="btn-group btn-group-justified" role="group">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-lg btn-primary">
+                                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>　計算
+                                        </button>
+                                    </div>
 				</div>
+                            </div>
 			
 			</form>
 		</div>
 	</body>
-	<script type="text/javascript" src="./pert.js"></script>
+        <script type="text/javascript" src="./pert.js" ></script>
 </html>
